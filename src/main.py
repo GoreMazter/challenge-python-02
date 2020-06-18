@@ -5,7 +5,14 @@ SYMBOLS = list('!"#$%&\'()*+,-./:;?@[]^_`{|}~')
 
 
 def generate_password():
-    # Start coding here
+    password=""
+    for i in range(random.randint(2,4)):
+        password+=random.choice(SYMBOLS)
+        password+=random.choice(string.ascii_lowercase)
+        password+=random.choice(string.ascii_uppercase)
+        password+=str(random.randint(0,9))
+    print(password)
+    return password
 
 
 def validate(password):
